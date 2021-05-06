@@ -9,7 +9,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { MovieComponent } from './movie/movie.component';
+import { MoviesComponent } from './movie/movie.component';
+import { MoviesAddComponent } from './movie/movies-add.component';
+import { MoviesUpdateComponent } from './movie/movies-update.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MovieComponent } from './movie/movie.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    MovieComponent
+    MoviesAddComponent,
+    MoviesUpdateComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,7 +32,9 @@ import { MovieComponent } from './movie/movie.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'movie', component: MovieComponent },
+      { path: 'movies', component: MoviesComponent },
+      { path: 'movie-add', component: MoviesAddComponent },
+      { path: 'movie-update', component: MoviesUpdateComponent },
     ])
   ],
   providers: [],
